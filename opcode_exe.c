@@ -1,17 +1,13 @@
 #include "monty.h"
 
-// Add the following function to opcode_execution.c
-
 /**
- * execute_opcode - Executes the opcode based on the instruction_t structure.
+ * execute_opcode - Executes the opcode based on the instructions
  * @opcode: The opcode to execute
- * @stack: Double pointer to the head of the stack
- * @line_number: Line number in the Monty byte code file
+ * @stack: Pointer to the head
+ * @line_number: Line number
  */
 void execute_opcode(const char *opcode, stack_t **stack, unsigned int line_number)
 {
-    // TODO: Implement the switch/case structure to handle different opcodes
-    // Example:
     if (strcmp(opcode, "push") == 0)
     {
         push(stack, line_number);
@@ -20,5 +16,4 @@ void execute_opcode(const char *opcode, stack_t **stack, unsigned int line_numbe
     {
         pall(stack, line_number);
     }
-    // Add more cases for other opcodes
 }
